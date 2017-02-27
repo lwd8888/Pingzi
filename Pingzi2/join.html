@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta content="webkit" name="renderer">
+		<meta name="format-detection" content="telephone=no">
+
+		<title>苹子理财</title>
+		<meta name="keywords" content="苹子理财,央企,国企理财项目,App理财,P2P,金融理财,App赚钱,互联网金融">
+		<meta name="description" content="苹子理财官方网站。央企国企保理项目，年化收益率6-12%，理财首选。注册就送6666元体验金！苹子理财以P2B的商业模式，将互联网金融与商业保理创新结合。为广大的投资者打造便捷、专业的互联网金融理财平台。">
+		<link rel="stylesheet" href="css/bootstrap.3.3.5.css" />
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/joinuser.css" />
+
+		<body>
+			<header>
+				<div class="header">
+					<div class="titleimg">
+						<a href="/"><img src="img/logo.png" class="yeatitle" alt=""></a>
+					</div>
+					<i class="mobileIcon" id="mobileIcon"></i>
+					<nav>
+						<ul>
+							<li>
+								<a href="index.html">首页</a>
+							</li>
+							<li>
+								<a href="about.html">关于我们</a>
+							</li>
+							<li>
+								<a href="ensure.html">安全保障</a>
+							</li>
+							<li>
+								<a href="join.html" class="activeA">加入我们</a>
+							</li>
+							<li class="op-data rel">
+								<a href="yunyin.html">运营数据</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+
+			<section id="init" class="init" style="display: none;">
+				<img src="data:image/gif;base64,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" alt="" class="loading" style="display: none;">
+			</section>
+			<section class="banner">
+				<img src="img/jr (2).jpg" alt="" class="banner">
+			</section>
+			<section class="bg">
+				<section class="main">
+					<aside class="fir" id="fir">
+						<div class="firLevel active">开发</div>
+						<div class="firLevel">UI设计</div>
+						<div class="firLevel">运营</div>
+					</aside>
+					<aside class="secord">
+						<section id="enginer" class="sec Sec_fir">
+							<div class=" secDiv ">
+								<div class="secLevel  active">java工程师</div>
+								<div class="secLevel">WEB前端工程师</div>
+								<div class="secLevel">运维工程师</div>
+								<div class="secLevel">技术主管</div>
+							</div>
+						</section>
+						<section id="designer" class="sec Sec_sec">
+							<div class=" secDiv ">
+								<div class="secLevel active">平面设计</div>
+							</div>
+						</section>
+						<section id="operate" class="sec Sec_thir">
+							<div class="secDiv ">
+								<div class="secLevel   active">品牌公关专员（BD)</div>
+								<div class="secLevel">品牌公关专员（执行)</div>
+								<div class="secLevel">文案策划</div>
+								<div class="secLevel">新媒体运营专员</div>
+							</div>
+						</section>
+						<section id="java" class="enginer" style="display: block;">
+							<div class="">
+								<div class="thirdLevel1">岗位职责</div>
+								<div class="thirdLevel2">
+									1．理解业务需求为软件开发提供技术方案设计；<br> 2．了解现有技术系统，持续优化性能架构；
+									<br> 3．从事核心部分代码的编写。
+									<br>
+								</div>
+								<div class="thirdLevel1">任职要求：</div>
+								<div class="thirdLevel2">
+									1、计算机软件或相关专业本科以上学历； <br> 2、具有3年以上JAVA 开发经验,具备扎实的数据结构、算法基础；<br> 3、熟悉Struts2、Spring、Hibernate等开源框架；
+									<br> 4、熟悉主流关系数据库Mysql、mongodb，有sql调优经验优先；
+									<br> 5、具备js、jquery应用经验；
+									<br> 6、熟练使用Git代码管理工具及其管理方法；
+									<br> 7、愿意做事，愿意学习，有良好的团队合作精神和沟通协调能力。
+								</div>
+								<div class="thirdLevel1">
+									工作薪资
+								</div>
+								<div class="thirdLevel2">
+									10-18K 14薪
+								</div>
+								<div class="thirdLevel1">投递邮箱</div>
+								<div class="thirdLevel2">hr@pingzimoney.cn</div>
+							</div>
+						</section>
+						<section id="web" class="enginer">
+							<div class=" ">
+								<div class="thirdLevel1">岗位职责</div>
+								<div class="thirdLevel2">
+									1、负责项目系统平台的WEB开发与优化；<br> 2、根据产品需求实现页面前端良好交互效果；
+									<br> 3、参与项目产品研发，及时配合团队实现产品界面和功能。
+									<br>
+								</div>
+								<div class="thirdLevel1">任职要求：</div>
+								<div class="thirdLevel2">
+									1、熟悉Spring MVC+Spring+Hibernate三层架构技术，3-5年工作经验；<br> 2、精通JavaScript、Ajax、Flash、JQuery等各种Web前端开发技术，具备一定的跨浏览器开发经验；
+									<br> 3、精通DIV+CSS网页框架布局的HTML代码编写，能用HTML5/CSS3熟练地进行页面开发；
+									<br> 4、精通各主流浏览器（IE6+、Firefox、Chrome、Safari）间的差异性，能快速定位和解决各种兼容难题；
+									<br> 5、熟练使用Git代码管理工具及其管理方法(如git flow)。<br>
+								</div>
+								<div class="thirdLevel1">
+									工作薪资
+								</div>
+								<div class="thirdLevel2">
+									10-20K 14薪
+								</div>
+								<div class="thirdLevel1">投递邮箱</div>
+								<div class="thirdLevel2">hr@pingzimoney.cn</div>
+							</div>
+						</section>
+						<section id="op" class="enginer">
+							<div class="">
+								<div class="thirdLevel1">岗位职责</div>
+								<div class="thirdLevel2">
+									1、公司下一代云服务平台的构建和运维工作；<br> 2、公司现有云服务平台的运维工作；
+									<br> 3、公司各类IT系统的构建和运维工作。
+									<br>
+								</div>
+								<div class="thirdLevel1">任职要求：</div>
+								<div class="thirdLevel2">
+									1、精通Docker容器技术及相关编排管理系统、监控系统，至少1年以上大规模使用过Docker技术到CI/CD、生产环境的实践经验，熟悉Rancher或Kubernetes或Mesos或OpenStack的优先；<br> 2、精通国内外主流IaaS、PaaS云厂家的产品使用和运维、监控技术，包括但不限于阿里云、腾讯云、金山云、AWS、Digital Ocean；<br> 3、2年以上互联网公司运维经验、APM系统构建经验，精通Linux、交换机、路由器和Puppet、Nginx、MySQL、Redis、ELKstack等常用互联网技术stack的部署、监控、调优；
+									<br> 4、良好的团队合作意识，有强烈的责任心和积极主动的工作态度，较强的沟通能力和表达能力。
+									<br>
+								</div>
+								<div class="thirdLevel1">
+									工作薪资
+								</div>
+								<div class="thirdLevel2">
+									10-20K 14薪
+								</div>
+								<div class="thirdLevel1">投递邮箱</div>
+								<div class="thirdLevel2">hr@pingzimoney.cn</div>
+							</div>
+						</section>
+						<section id="manager" class="enginer">
+							<div class="">
+								<div class="thirdLevel1">岗位职责</div>
+								<div class="thirdLevel2">
+									1. 负责公司（移动端，web端，API等）产品业务的技术架构搭建，功能模块设计，开发及优化；<br> 2. 负责数据库调优，产品性能优化；<br> 3. 搭建系统开发环境，完成产品开发工作；<br> 4. 负责应用服务端的设计，开发，维护；<br> 5. 生产环境部署，监控与优化；<br> 6. 根据业务及产品需求制定技术方案，对复杂问题进行攻克。<br>
+								</div>
+								<div class="thirdLevel1">任职要求：</div>
+								<div class="thirdLevel2">
+									1. 计算机或相关专业本科及以上学历；<br> 2. 4年以上工作经验，有大型互联网公司2年以上经验，参与过大型平台级产品的核心技术工作，至少2年以上的技术管理工作，并参与过优秀的创业公司尤佳；<br> 3. 有电商、订单系统、支付系统、O2O业务、社交产品等相关开发经验优先；<br> 4. 有高负载应用或分布式系统开发经验；<br> 5. 有开源项目，有丰富的技术圈内积累，技术深度扎实，有自己的技术博客；<br> 6. 精通JAVA、Javascript，并精通其它至少一种开发语言；<br> 7. 精通linux、git、web开发流程，熟悉mvc开发模式；<br> 8. 精通mysql、mongodb、redis、nginx中的一种或多种；<br> 9. 熟悉多种主流框架，有从0-1架构一个平台型产品的架构能力；<br> 10. 熟悉前端开发，熟悉前端技术，如HTML/CSS/Javascript/jQuery/Ajax，熟悉IOS、Android前端技术；<br> 11. 有一定的运维经验，有高负载应用或分布式系统开发经验；<br> 12. 对代码质量要求极其严格；<br> 13. 注重利用合理的设计模式和模块化的组织方式对代码进行架构；<br> 14. 自我学习能力强，强大的解决问题能力，高效率的开发能力，强大的技术团队推动能力，分析解决问题能力强，极具主动精神及创业精神，善于沟通交流，有责任感，有团队协作精神，对新技术敏感.
+								</div>
+								<div class="thirdLevel1">
+									工作薪资
+								</div>
+								<div class="thirdLevel2">
+									15-25K 14薪
+								</div>
+								<div class="thirdLevel1">投递邮箱</div>
+								<div class="thirdLevel2">hr@pingzimoney.cn</div>
+							</div>
+						</section>
+						<section id="drawer" class="designer">
+							<div class="">
+								<div class="thirdLevel1">岗位职责</div>
+								<div class="thirdLevel2">
+									1. 公司品牌形象研究与改进，主公司官方网站的更新；<br> 2. 线下的推广，主要包括宣传海报、宣传折页、网页介绍、推广活动等；<br> 3. 和项目小组对项目的方向、可执行性等进行讨论，提出合理的设计方案；<br> 4. 就公司推广进行页面设计，包括H5、名片、宣传海报、宣传折页、网页设计等。<br>
+								</div>
+								<div class="thirdLevel1">任职要求：</div>
+								<div class="thirdLevel2">
+									1. 平面设计3年及以上工作经验，有成熟作品，及有过互联网巨头公司工作经验者优先；<br> 2. 具有深厚的美术功底和良好的构思创意能力，对色彩有敏锐的嗅觉，及独特的设计风格，独到的创意视点与创新意识；<br> 3. 具备良好的设计水平及扎实的手绘功底，有出色的创意和设计执行能力；<br> 4. 对流行趋势有着较强的敏感度具备开阔的眼界；<br> 5. 熟练掌握photoshop,AI等软件，熟练使用flash者优先的开发能力，强大的技术团队推动能力，分析解决问题能力强，极具主动精神及创业精神，善于沟通交流，有责任感，有团队协作精神，对新技术敏感。<br>
+								</div>
+								<div class="thirdLevel1">
+									工作薪资
+								</div>
+								<div class="thirdLevel2">
+									8-12K 14薪
+								</div>
+								<div class="thirdLevel1">投递邮箱</div>
+								<div class="thirdLevel2">hr@pingzimoney.cn</div>
+							</div>
+						</section>
+						<section id="bd" class="operate">
+							<div class="">
+								<div class="thirdLevel1">岗位职责</div>
+								<div class="thirdLevel2">
+									1、根据公司战略方向及业务发展需求，接洽行业内TOP合作商的商务沟通和洽谈；<br> 2、负责寻找、挖掘、开拓有利于公司的合作资源，有效准确的评估资源的可合作性，高效灵活的制定战略合作机制，并推动合作执行；
+									<br> 3、负责合作沟通，争取最大资源，负责推进项目实施；
+									<br> 4、商务合作协议的审核，合作形式、效果的评估、审核。
+									<br>
+								</div>
+								<div class="thirdLevel1">任职要求：</div>
+								<div class="thirdLevel2">
+									1. 大专及以上学历,22-30岁，1年以上相关工作经验；<br> 2. 有商务拓展工作经验，熟悉并热爱互联网or金融；<br> 3. 能够独立进行商务谈判、具备敏锐商业意识、沟通与谈判技巧；<br> 4. 独立负责同类产品的商务合作，具备较强的资源协调和管理能力；<br> 5. 条理清晰、逻辑性强，善于面对压力，良好的沟通能力和团队协调能力。
+								</div>
+								<div class="thirdLevel1">
+									工作薪资
+								</div>
+								<div class="thirdLevel2">
+									5-10K 14薪
+								</div>
+								<div class="thirdLevel1">投递邮箱</div>
+								<div class="thirdLevel2">hr@pingzimoney.cn</div>
+							</div>
+						</section>
+						<section id="pd" class="operate">
+							<div class="">
+								<div class="thirdLevel1">岗位职责</div>
+								<div class="thirdLevel2">
+									1、根据公司战略方向及业务发展需求，接洽行业内TOP合作商的商务沟通和洽谈；<br> 2、负责寻找、挖掘、开拓有利于公司的合作资源，有效准确的评估资源的可合作性，高效灵活的制定战略合作机制，并推动合作执行；
+									<br> 3、负责合作沟通，争取最大资源，负责推进项目实施；
+									<br> 4、商务合作协议的审核，合作形式、效果的评估、审核。
+									<br>
+								</div>
+								<div class="thirdLevel1">任职要求：</div>
+								<div class="thirdLevel2">
+									1. 大专及以上学历，22-30岁，1年以上相关工作经验；<br> 2. 有商务拓展工作经验，熟悉并热爱互联网or金融；<br> 3. 能够独立进行商务谈判、具备敏锐商业意识、沟通与谈判技巧；<br> 4. 独立负责同类产品的商务合作，具备较强的资源协调和管理能力；<br> 5. 条理清晰、逻辑性强，善于面对压力，良好的沟通能力和团队协调能力。<br>
+								</div>
+								<div class="thirdLevel1">
+									工作薪资
+								</div>
+								<div class="thirdLevel2">
+									5-10K 14薪
+								</div>
+								<div class="thirdLevel1">投递邮箱</div>
+								<div class="thirdLevel2">hr@pingzimoney.cn</div>
+							</div>
+						</section>
+						<section id="bord" class="operate">
+							<div class=" ">
+								<div class="thirdLevel1">岗位职责</div>
+								<div class="thirdLevel2">
+									1、搜集并撰写与互联网金融相关新闻、素材和活动内容等，做好公司官方网站每天内容的更新和维护，并符合SEO优化的要求和方向；<br> 2、负责利用论坛、百度知道、贴吧、百科，分类信息网等平台进行宣传推广；
+									<br> 3、从事多样化的网络推广工作，进行SEO外链建设和SEM账户维护；
+									<br> 4、熟悉并跟踪网站的内容，了解竞争对手的内容，在网络上传播这些优质内容；
+									<br> 5、对竞价关键词进行整理和数据分析,进行有效评估,并持续优化竞价推广方法。
+									<br>
+								</div>
+								<div class="thirdLevel1">任职要求：</div>
+								<div class="thirdLevel2">
+									1. 大专以上学历，22-30岁，有SEM/SEO经验者优先；<br> 2. 逻辑思维能力强，具备较强的表达、学习、创意与公关能力；<br> 3. 工作细心，肯吃苦，责任心强能承受较强工作压力，有较强适应能力；<br> 4. 具备良好的人际交往能力、团队合作能力、沟通能力、市场开拓能力;谦虚，上进心强，对学习新鲜事物有浓厚兴趣；<br> 5. 具备扎实的文字撰写功底，具备较强的表达、学习能力；<br> 6. 工作细心，肯吃苦，责任心强能承受较强工作压力，有较强适应能力；<br> 7. 熟知各大应用商店，有较强的数据分析能力。<br>
+								</div>
+								<div class="thirdLevel1">
+									工作薪资
+								</div>
+								<div class="thirdLevel2">
+									5-10K 14薪
+								</div>
+								<div class="thirdLevel1">投递邮箱</div>
+								<div class="thirdLevel2">hr@pingzimoney.cn</div>
+							</div>
+						</section>
+						<section id="plan" class="operate">
+							<div class=" ">
+								<div class="thirdLevel1">岗位职责</div>
+								<div class="thirdLevel2">
+									1. 负责项目的品牌文案撰写、创意构思、公司项目提案给予前期提案策划撰写，设计创意说明及后期结案报告等服务；<br> 2. 有丰富的商业项目方案经验；<br> 3. 有敏锐的创作嗅觉和精准的创意表现力，具备独立思考和分析能力，对问题有自己独特的见解；<br> 4. 独立撰写各类品牌文案、新闻稿件、活动策划方案、报告及项目各项宣传资料文案等。<br>
+								</div>
+								<div class="thirdLevel1">任职要求：</div>
+								<div class="thirdLevel2">
+									1. 大专及以上学历，22-30岁，1年以上相关工作经验；<br> 2. 熟练使用Word、Excel、PPT等办公软件；<br> 3. 具备良好的市场意识和用户敏感度、具备较强的学习、领悟和沟通能力和团队合作意识；<br> 4. 具备良好的媒体稿件编写能力，公关稿方面较为擅长；<br> 5. 热爱创意和文字工作，具备很强的写作能力和文字素养；<br> 6. 具备较强的学习、领悟和沟通能力和团队合作意识； <br> 7. 传统媒体行业（纸媒、平面媒体等），中文、新闻或市场营销等相关专业优先考虑。<br>
+								</div>
+								<div class="thirdLevel1">
+									工作薪资
+								</div>
+								<div class="thirdLevel2">
+									5-10K 14薪
+								</div>
+								<div class="thirdLevel1">投递邮箱</div>
+								<div class="thirdLevel2">hr@pingzimoney.cn</div>
+							</div>
+						</section>
+						<section id="med" class="operate">
+							<div class=" ">
+								<div class="thirdLevel1">岗位职责</div>
+								<div class="thirdLevel2">
+									1. 负责产品宣传推广、品牌传播的文案策划，创作文案内容；<br> 2. 负责撰写有关公司、产品及品牌形象的文案，包括新闻稿、产品评测等；<br> 3. 捕捉互联网营销趋势及热点，掌握目标用户最新网络行为动向，制定行之有效的内容方案；<br> 4. 为产品推广、品牌传播提供创意思路或创意点，协助完成相关内容文案；<br> 5. 熟悉社会化媒体营销，配合团队完成内容推广和活动策划执行。<br>
+								</div>
+								<div class="thirdLevel1">任职要求：</div>
+								<div class="thirdLevel2">
+									1. 大专及以上学历，22-30岁，1年以上相关工作经验；<br> 2. 一年以上互联网相关工作经验；<br> 3. 熟悉微博、微信，了解并能熟练使用各类微博、微信运营工具；<br> 4. 文字功底扎实，有基础写作文案策划能力；<br> 5. 熟悉互联网，对微博、微信、博客、论坛等产品有浓厚兴趣及深刻认识，熟悉手机、移动终端、数码科技类等产品；<br> 6. 具有一定的PS做图能力，能策划图片文案对白；<br> 7. 具备良好的数据分析能力、数据监测能力和跨团队协作能力。<br>
+								</div>
+								<div class="thirdLevel1">
+									工作薪资
+								</div>
+								<div class="thirdLevel2">
+									5-10K 14薪
+								</div>
+								<div class="thirdLevel1">投递邮箱</div>
+								<div class="thirdLevel2">hr@pingzimoney.cn</div>
+							</div>
+						</section>
+					</aside>
+				</section>
+			</section>
+			<footer>
+				<div class="linkdiv">
+					<span>友情链接:</span>
+					<a href="https://www.baidu.com/index.php?tn=93139410_hao_pg" target="_blank">百度</a>
+					<a href="https://ai.taobao.com/?pid=mm_119794610_20738404_70358547" target="_blank">淘宝</a>
+					<a href="http://https://www.jd.com/?cu=true&utm_source=www.166866.net&utm_medium=tuiguang&utm_campaign=t_1000136426_&utm_term=665dccbf31fc4dba9ca26f7fcba5d0b7&abt=3" target="_blank">京东</a>
+					<a href="https://www.gnete.com" target="_blank">银联网络支付</a>
+					<a href="https://www.hao123.com/" target="_blank">hao123</a>
+					<a href="http://map.baidu.com/" target="_blank">地图</a>
+					<a href="https://temai.taobao.com/cheap.htm?pid=mm_120970988_21336035_71798582" target="_blank">淘宝特卖</a>
+					<a href="http://www.shuowan.com/?dbc " target="_blank">手机游戏</a>
+				</div>
+				<div class="tableDiv">
+					<table>
+						<tbody>
+							<tr>
+								<td><i class="ir iaddr"></i></td>
+								<td>地址</td>
+								<td>深圳市XXXXXXXXXXXXXXXXXXXXXXXX地点</td>
+							</tr>
+							<tr>
+								<td><i class="ir ipost"></i></td>
+								<td>邮编</td>
+								<td>888888</td>
+							</tr>
+							<tr>
+								<td><i class="ir iphone"></i></td>
+								<td>客服热线</td>
+								<td>8888-8888-888</td>
+							</tr>
+						</tbody>
+					</table>
+					<table>
+						<tbody>
+							<tr>
+								<td><i class="ir iqq"></i></td>
+								<td>QQ客服</td>
+								<td>
+									<a href="#" target="_blank" class="online-kf">88888888</a>
+								</td>
+							</tr>
+							<tr class="wxkf">
+								<td><i class="ir imico"></i></td>
+								<td>微信客服</td>
+								<td class="wxkftd">weixinkefu</td>
+							</tr>
+							<tr>
+								<td><i class="ir imail"></i></td>
+								<td>客服邮箱</td>
+								<td>
+									<a href="mailto:kefu@pingzimoney.cn">kefu@pingzimoney.cn</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="remainder">市场有风险 投资需谨慎</div>
+				<div class="copyright"> XXXXICP备11111111111XXXX-3Qian Pingzi Finance Limited 苹子理财</div>
+			</footer>
+			<script src="js/jquery-3.1.1.min.js"></script>
+			<script type="text/javascript" src="js/Join.js"></script>
+			<script type="text/javascript" src="js/common.js" ></script>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>  
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		</body>
+
+</html>
